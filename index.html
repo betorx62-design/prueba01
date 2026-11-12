@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Taco Feroz | Comida Mexicana en Bucaramanga</title>
+    <meta name="description" content="El Taco Feroz - El mejor restaurante de comida mexicana auténtica en Bucaramanga, Colombia. Tacos, burritos, quesadillas y más.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">
+                <span class="logo-icon">🌮</span>
+                <span class="logo-text">El Taco <span class="highlight">Feroz</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <header id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-sub">🔥 Bucaramanga, Colombia</p>
+            <h1 class="hero-title">El Taco <span class="highlight">Feroz</span></h1>
+            <p class="hero-desc">Sabor mexicano auténtico con el corazón santandereano. Tacos, burritos, enchiladas y mucho más preparados con ingredientes frescos y recetas tradicionales.</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">Ver Menú</a>
+                <a href="#contacto" class="btn btn-outline">Contáctanos</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#nosotros"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </header>
+
+    <!-- ========== NOSOTROS ========== -->
+    <section id="nosotros">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nuestra Historia</span>
+                <h2>Sobre <span class="highlight">Nosotros</span></h2>
+                <p class="section-desc">Pioneros en traer a Bucaramanga la auténtica devoción por el taco mexicano hecho como manda la tradición.</p>
+            </div>
+            <div class="about-story">
+                <h3>Pioneros en la Tradición del Auténtico Taco Mexicano en Bucaramanga</h3>
+                <p>En <strong>El Taco Feroz</strong> nos enorgullece ser pioneros en Bucaramanga en la elaboración tradicional del taco mexicano, preservando con devoción las técnicas ancestrales que le dan identidad a esta joya gastronómica. Nuestra historia comenzó con el firme compromiso de respetar cada proceso culinario: desde el uso de comales tradicionales y la selección minuciosa de maíces para nuestras tortillas hechas a mano día a día, hasta la cocción lenta de carnes marinadas en adobos de chiles secos y especias originarias de México.</p>
+                <p>Cada taco que servimos encierra décadas de herencia, respeto por la cultura taquera y una búsqueda incansable por brindar una experiencia genuina en el corazón de Santander, demostrando que la verdadera tradición mexicana se vive en el aroma del maíz recién cocido, el balance perfecto de nuestras salsas molcajeteadas y la pasión que le imprimimos a cada bocado.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon"><i class="fas fa-fire"></i></div>
+                    <h3>Pasión por el Sabor</h3>
+                    <p>Nacimos de la pasión por la cocina mexicana auténtica, trayendo a Bucaramanga los sabores más intensos y tradicionales de México.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Ingredientes Frescos</h3>
+                    <p>Utilizamos ingredientes locales de primera calidad y especias importadas directamente de México para garantizar la autenticidad de cada plato.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Hecho con Amor</h3>
+                    <p>Cada platillo es preparado al momento con dedicación artesanal. Nuestras tortillas son hechas a mano y nuestras salsas preparadas diariamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== MENÚ ========== -->
+    <section id="menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Lo Mejor de México</span>
+                <h2>Nuestro <span class="highlight">Menú</span></h2>
+                <p class="section-desc">Descubre nuestros platillos preparados con recetas tradicionales mexicanas y el toque feroz que nos caracteriza.</p>
+            </div>
+
+            <!-- Filtros -->
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="tacos">Tacos</button>
+                <button class="filter-btn" data-filter="platos">Platos Fuertes</button>
+                <button class="filter-btn" data-filter="acompanamiento">Acompañamientos</button>
+                <button class="filter-btn" data-filter="postre">Postres</button>
+            </div>
+
+            <!-- Grid de productos -->
+            <div class="menu-grid" id="menuGrid">
+
+                <!-- 1. Tacos al Pastor -->
+                <div class="menu-item" data-category="tacos">
+                    <div class="menu-item-img">
+                        <span class="menu-emoji">🌮</span>
+                        <span class="menu-badge">Popular</span>
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Tacos al Pastor</h3>
+                            <span class="menu-price">$28.000</span>
+                        </div>
+                        <p>Orden de 3 tacos con carne de cerdo marinada en achiote, piña asada, cebolla, cilantro y salsa verde. Servidos en tortilla de maíz artesanal.</p>
+                        <div class="menu-item-tags">
+                            <span class="tag tag-spicy">🌶️ Picante</span>
+                            <span class="tag">x3 unidades</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Burrito de Carne Asada -->
+                <div class="menu-item" data-category="platos">
+                    <div class="menu-item-img">
+                        <span class="menu-emoji">🌯</span>
+                        <span class="menu-badge best">El Más Feroz</span>
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Burrito de Carne Asada</h3>
+                            <span class="menu-price">$35.000</span>
+                        </div>
+                        <p>Tortilla de harina jumbo rellena de carne asada, arroz mexicano, frijoles refritos, pico de gallo, crema ácida, queso y guacamole fresco.</p>
+                        <div class="menu-item-tags">
+                            <span class="tag">Tamaño XL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Quesadillas de Pollo -->
+                <div class="menu-item" data-category="tacos">
+                    <div class="menu-item-img">
+                        <span class="menu-emoji">🧀</span>
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Quesadillas de Pollo</h3>
+                            <span class="menu-price">$26.000</span>
+                        </div>
+                        <p>Dos quesadillas de tortilla de harina con pollo desmechado, queso Oaxaca fundido, pimientos y cebolla caramelizada. Acompañadas de crema y guacamole.</p>
+                        <div class="menu-item-tags">
+                            <span class="tag">x2 unidades</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Nachos Supremos -->
+                <div class="menu-item" data-category="acompanamiento">
+                    <div class="menu-item-img">
+                        <span class="menu-emoji">🫔</span>
+                        <span class="menu-badge">Para Compartir</span>
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Nachos Supremos</h3>
+                            <span class="menu-price">$32.000</span>
+                        </div>
+                        <p>Generosa porción de totopos crujientes bañados en queso cheddar fundido, carne molida, jalapeños, frijoles, crema ácida, guacamole y pico de gallo.</p>
+                        <div class="menu-item-tags">
+                            <span class="tag tag-spicy">🌶️ Picante</span>
+                            <span class="tag">Para compartir</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Enchiladas Rojas -->
+                <div class="menu-item" data-category="platos">
+                    <div class="menu-item-img">
+                        <span class="menu-emoji">🫕</span>
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Enchiladas Rojas</h3>
+                            <span class="menu-price">$30.000</span>
+                        </div>
+                        <p>Tres tortillas de maíz rellenas de pollo, bañadas en salsa roja de chiles guajillo, gratinadas con queso. Servidas con arroz mexicano y frijoles.</p>
+                        <div class="menu-item-tags">
+                            <span class="tag tag-spicy">🌶️🌶️ Muy Picante</span>
+                            <span class="tag">x3 unidades</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Chilaquiles Verdes -->
+                <div class="menu-item" data-category="platos">
+                    <div class="menu-item-img">
+                        <span class="menu-emoji">🥘</span>
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Chilaquiles Verdes</h3>
+                            <span class="menu-price">$27.000</span>
+                        </div>
+                        <p>Totopos bañados en salsa verde de tomatillo, cubiertos con crema, queso fresco desmoronado, cebolla morada y cilantro. Con huevo estrellado o pollo.</p>
+                        <div class="menu-item-tags">
+                            <span class="tag">Clásico</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Quesabirria -->
+                <div class="menu-item" data-category="tacos">
+                    <div class="menu-item-img">
+                        <span class="menu-emoji">🥩</span>
+                        <span class="menu-badge">Nuevo</span>
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Quesabirria</h3>
+                            <span class="menu-price">$38.000</span>
+                        </div>
+                        <p>Tres tacos de birria de res con queso Oaxaca fundido, bañados en aceite de chile. Acompañados de consomé caliente para sumergir. ¡Una explosión de sabor!</p>
+                        <div class="menu-item-tags">
+                            <span class="tag tag-spicy">🌶️ Picante</span>
+                            <span class="tag">Con consomé</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Flautas de Pollo -->
+                <div class="menu-item" data-category="platos">
+                    <div class="menu-item-img">
+                        <span class="menu-emoji">🫓</span>
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Flautas de Pollo</h3>
+                            <span class="menu-price">$30.000</span>
+                        </div>
+                        <p>Cuatro tortillas de maíz enrolladas y rellenas de pollo desmechado, fritas hasta quedar doradas y crujientes. Con lechuga, crema, queso y salsa roja.</p>
+                        <div class="menu-item-tags">
+                            <span class="tag">x4 unidades</span>
+                            <span class="tag">Crujiente</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Elote Mexicano -->
+                <div class="menu-item" data-category="acompanamiento">
+                    <div class="menu-item-img">
+                        <span class="menu-emoji">🌽</span>
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Elote Mexicano</h3>
+                            <span class="menu-price">$14.000</span>
+                        </div>
+                        <p>Mazorca de maíz asada a la parrilla, untada con mayonesa, espolvoreada con chile tajín, queso cotija y un toque de limón. El auténtico elote callejero.</p>
+                        <div class="menu-item-tags">
+                            <span class="tag">Street Food</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Churros con Chocolate -->
+                <div class="menu-item" data-category="postre">
+                    <div class="menu-item-img">
+                        <span class="menu-emoji">🍫</span>
+                        <span class="menu-badge">Dulce</span>
+                    </div>
+                    <div class="menu-item-info">
+                        <div class="menu-item-header">
+                            <h3>Churros con Chocolate</h3>
+                            <span class="menu-price">$16.000</span>
+                        </div>
+                        <p>Seis churros artesanales recién hechos, espolvoreados con azúcar y canela. Acompañados de una generosa porción de salsa de chocolate caliente para sumergir.</p>
+                        <div class="menu-item-tags">
+                            <span class="tag">x6 unidades</span>
+                            <span class="tag">Postre</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROMO BANNER ========== -->
+    <section id="promo">
+        <div class="promo-overlay"></div>
+        <div class="container promo-content">
+            <h2>🔥 ¡Combo Feroz!</h2>
+            <p>Burrito + Nachos + Bebida por solo <strong>$55.000</strong></p>
+            <p class="promo-small">Disponible todos los días de 12:00 m a 3:00 pm</p>
+            <a href="https://wa.me/573001234567?text=Hola!%20Quiero%20pedir%20el%20Combo%20Feroz" target="_blank" class="btn btn-primary">
+                <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- ========== CONTACTO ========== -->
+    <section id="contacto">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Visítanos</span>
+                <h2>Contacto y <span class="highlight">Ubicación</span></h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p>Cra 33 #42-15, Cabecera del Llano<br>Bucaramanga, Santander, Colombia</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <h4>Horarios</h4>
+                            <p>Lunes a Jueves: 11:30 am - 9:30 pm<br>Viernes y Sábado: 11:30 am - 11:00 pm<br>Domingos: 12:00 m - 9:00 pm</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p>(607) 634 5678<br>Cel: 300 123 4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Correo</h4>
+                            <p>info@eltacoferoz.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/573001234567" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.123456789!2d-73.1198!3d7.1254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCabecera+del+Llano+Bucaramanga!5e0!3m2!1ses!2sco!4v1"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Ubicación de El Taco Feroz en Bucaramanga">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3><span class="logo-icon">🌮</span> El Taco <span class="highlight">Feroz</span></h3>
+                    <p>El sabor más feroz de Bucaramanga. Comida mexicana auténtica con alma santandereana.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="#hero">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#menu">Menú</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Libro de Reclamaciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 El Taco Feroz. Todos los derechos reservados. Bucaramanga, Colombia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón WhatsApp flotante -->
+    <a href="https://wa.me/573001234567?text=Hola!%20Quiero%20hacer%20un%20pedido" target="_blank" class="whatsapp-float" aria-label="Escríbenos por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Botón Scroll to Top -->
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Volver arriba">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
